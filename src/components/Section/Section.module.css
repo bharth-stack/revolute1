@@ -1,0 +1,123 @@
+.section_img {
+  margin-left: 4rem;
+  width: 29%;
+  position: relative;
+  left: -7rem;
+}
+.section_align {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  color: #fcfcff;
+  margin-bottom: 5rem;
+}
+.section_align h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1.7rem;
+  font-style: normal;
+  font-weight: 500;
+}
+/* .section_align h1 {
+  font-weight: 400;
+} */
+.section_align p {
+  font-size: 1.7rem;
+  color: #f3b125;
+}
+.section_input {
+  background: linear-gradient(
+    180deg,
+    rgba(220, 220, 220, 0.71) 0%,
+    #ffffff 100%
+  );
+  border: 1px solid #9e3af4;
+  border-radius: 0.7rem 0 0 0.7rem;
+  width: 40%;
+  padding: 0.7rem;
+  /* text-align: center; */
+
+  color: #000000;
+}
+.section_input_button {
+  padding: 0.7rem 1.5rem 0.75rem 1.5rem;
+  /* margin-bottom: -1rem; */
+  border-radius: 0 0.7rem 0.7rem 0;
+  border: 1px solid #9e3af4;
+  background: linear-gradient(
+    180deg,
+    rgba(158, 58, 244, 0.71) 0%,
+    #542c7e 100%
+  );
+  text-align: center;
+
+  color: #ffffff;
+}
+.section_inputField {
+  text-align: center;
+  margin-top: 4rem;
+}
+.section_inputField p {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.section_inputField button:hover {
+  cursor: pointer;
+  color: #000;
+}
+.section_email {
+  width: 12%;
+  height: 1rem;
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.section_contact {
+  position: relative;
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  gap: 3rem;
+  top: 8rem;
+  left: -7rem;
+}
+.section_contact p {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.section_email p {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.section_align_i7 {
+  position: relative;
+  top: 4rem;
+  width: 7%;
+  left: 11rem;
+}
+.section_align_i8 {
+  position: relative;
+  top: -4rem;
+  width: 5%;
+  left: 5rem;
+}
+.section_align_i9 {
+  position: relative;
+  top: 7rem;
+  width: 4%;
+  left: 13rem;
+}
+.section_about {
+  margin-right: 5rem;
+}
+.section_blur {
+  position: absolute;
+  width: 20%;
+  height: 15rem;
+  left: 37rem;
+  top: 7rem;
+  background: rgba(158, 58, 244, 0.4);
+  filter: blur(4.5rem);
+}

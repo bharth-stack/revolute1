@@ -1,57 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { Fragment } from "react";
+import Footer from "./components/Footer/footer";
+import Header from "./components/Header/Header";
+import Section from "./components/Section/Section";
+import { useSelector, useDispatch } from "react-redux";
+import { nextHandler } from "./components/Store/counterSlice";
+// import Contact from "./components/Contact/Contact";
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  // const [pageUp,pageUpHandler]=useState(false);
+  const dispatch = useDispatch();
+  const page = useSelector((state) => {
+    return state.counter.nextPage;
+  });
+  console.log(page);
+  const number = useSelector((state) => {
+    return state.counter.value;
+  });
+  function backHandler(event) {
+    event.preventDefault();
+    dispatch(nextHandler(false));
+  }
+  // page?{}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <Fragment>
+      {!page && (
+        <div className="App">
+          <Header></Header>
+          <Section></Section>
+          <Footer></Footer>
+        </div>
+      )}
+      {page && (
+        <div>
+          <h1> THIS IS YOUR LINK PAGE with NUMBER </h1>
+          <h2>{number}</h2>
+          <button onClick={backHandler}>go back</button>
+        </div>
+      )}
+    </Fragment>
   );
 }
 
